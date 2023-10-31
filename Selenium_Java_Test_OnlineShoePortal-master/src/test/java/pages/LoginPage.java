@@ -7,15 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import java.time.Duration;
-
 public class LoginPage extends BaseTest
 {
    public LoginPage(WebDriver driver)
     {
         BaseTest.driver = driver;
-        //driver.manage().timeouts().implicitlyWait(Duration.);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6));
     }
-    //private readonly WebElement signInOptionHeader;
       WebElement
            signInOptionHeader = driver.findElement(By.xpath("//div[@class='panel header']//a[contains(text(),'Sign In')]"));
     WebElement emailTextBox = driver.findElement(By.id("email"));
